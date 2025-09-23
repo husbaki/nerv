@@ -1,109 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    body { 
-      margin: 0; 
-      font-family: Arial, sans-serif;
-      color: white;
-      background-color: black;
-      background-image: url(https://husbaki.github.io/nerv/assets/img/snowbackground.gif);
-      background-position: center;
-      background-attachment: fixed;
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background:  linear-gradient(to bottom, rgba(69, 23, 23, 1), rgba(0, 0, 0, 0.351));
-      padding: 15px 40px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 10;
-      height: 80px;
-      box-sizing: border-box;
-    }
-
-    .navbar img {
-      height: 60px;
-    }
-
-    .navbar-links {
-      display: flex;
-      gap: 25px;
-    }
-
-    .navbar a {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    .navbar a:hover {
-      color: #ff004c; 
-    }
-
-    .content {
-      padding-top: 120px; 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: calc(100vh - 120px);
-    }
-
-    .box {
-      background: rgb(101, 26, 26);
-      padding: 40px;
-      text-align: center;
-      max-width: 900px;
-      width: 80%;
-      box-shadow: 0 0 20px rgba(0,0,0,0.7);
-    }
-
-    #app { 
-      height: 400px; 
-      width: 350px; 
-      margin: auto; 
-    }
-  </style>
+  <title>NERV</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="navbar">
-    <img src="https://husbaki.github.io/nerv/assets/img/logo.svg" alt="logo">
-    <div class="navbar-links">
-      <a href="index.html">Home</a>
-      <a href="music.html">Music</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+
+  <div class="layout">
+    <div class="text-box">
+      <h1>Welcome to NERV</h1>
+      <p>God's in his heaven. All's right with the world.</p>
     </div>
+
+    <svg class="ribbon" xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         viewBox="0 0 1920 1080">
+      <defs></defs>
+      
+      <path id="text-path"
+            stroke-width="200"
+            stroke-miterlimit="0"
+            fill="none"
+            d="M-98 194C260 326 450 318 770 294 1010 262 1200 182 1430 150 1530 134 1631 129 1718 202.8 1810 289 1810 438 1540 510 1190 606 810 470 430 550 251 590 140 670 160 790 192 910 308 917 410 926 530 934 620 918 790 886 943 854 1100 806 1240 790 1500 750 1720 774 2120 945" />
+      
+      <text class="ribbon__text">
+        <textPath xlink:href="#text-path" startOffset="0">
+          <animate attributeName="startOffset" from="0%" to="-100%" begin="0s" dur="25s" repeatCount="indefinite" />
+          nerv nerv nerv nerv nerv nerv nerv nerv nerv nerv nerv nerv nerv nerv nerv
+          nerv nerv nerv nerv nerv nerv nerv nerv nerv nerv nerv nerv nerv nerv nerv
+          nerv nerv nerv nerv nerv nerv nerv nerv nerv nerv nerv nerv nerv nerv nerv
+          nerv nerv nerv nerv nerv nerv nerv nerv nerv nerv nerv nerv nerv nerv nerv
+        </textPath>
+      </text>
+    </svg>
   </div>
 
-  <div class="content">
-    <div class="box">
-      <h1>Добро пожаловать!</h1>
-      <p>Это пример текста в центре страницы. Фон остаётся на месте, а этот блок можно скроллить.</p>
-      <div id="app"></div>
-    </div>
-  </div>
+  <div class="scroll-down-arrow">&#x25BC;</div>
 
-  <script type="module">
-    import Webamp from "https://unpkg.com/webamp@^2";
-    const webamp = new Webamp({
-      initialSkin: { url: "https://cdn.webampskins.org/skins/a582298ef38cdb431988d64ef0eef491.wsz" },
-      initialTracks: [
-        { metaData:{artist:"Evangelion",title:"Fly Me To The Moon"}, url:"https://husbaki.github.io/nerv/music/Evangelion-Fly_Me_To_The%20Moon.mp3", duration:271 },
-        { metaData:{artist:"The Backseat Lovers",title:"Kilby Girl"}, url:"https://husbaki.github.io/nerv/music/The_Backseat_Lovers-Kilby_Girl.mp3", duration:282 },
-        { metaData:{artist:"",title:"We Are Going To Eclecfunk Your Ass"}, url:"https://raw.githubusercontent.com/captbaritone/webamp-music/4b556fbf/Eclectek_-_02_-_We_Are_Going_To_Eclecfunk_Your_Ass.mp3", duration:190.093061 }
-      ],
-    });
-    webamp.renderWhenReady(document.getElementById("app"));
-  </script>
+  <section class="info-section">
+    <h2>About NERV</h2>
+    <p>
+      NERV is an organization responsible for defending humanity from the threat of Angels.
+      It operates under strict secrecy and has advanced technology like Evangelion units.
+    </p>
+    <p>
+      This is just a placeholder text to demonstrate scrolling on the page.
+      You can add more content here to expand the information.
+    </p>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
