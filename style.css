@@ -1,0 +1,126 @@
+:root {
+  font-family: system-ui, sans-serif;
+  background: black;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: white;
+}
+
+.layout {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.text-box {
+  width: 40vw;
+  min-height: 100vh;
+  background-color: #4b0606;
+  color: #fff;
+  padding: 60px;
+  box-sizing: border-box;
+  font-family: 'NERVFont', sans-serif;
+  text-transform: uppercase;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-box h1 {
+  font-size: 48px;
+  color: #ff0000;
+  margin-bottom: 20px;
+}
+
+.text-box p {
+  font-size: 20px;
+  color: #ccc;
+}
+
+.ribbon {
+  width: 60vw;
+  min-height: 100vh;
+  stroke: #ff0000;
+}
+
+.ribbon__text {
+  text-transform: uppercase;
+  fill: #4b0606;
+  paint-order: stroke fill;
+  font-weight: 900;
+  font-size: 100px;
+  letter-spacing: 8px;
+  font-family: 'NERVFont', sans-serif;
+}
+
+.info-section {
+  padding: 60px 10vw;
+  background-color: #1a1a1a;
+  color: #fff;
+  font-family: 'NERVFont', sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.events {
+  padding: 60px 10vw;
+  background-color: #4d2d2d;
+  color: #fff;
+  font-family: 'NERVFont', sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.info-section h2 {
+  font-size: 36px;
+  color: #ff0000;
+  margin-bottom: 20px;
+}
+
+.scroll-down-arrow {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 48px;
+  color: #ff0000;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+  user-select: none;
+  z-index: 1000;
+
+  transition: opacity 0.5s ease;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%) translateY(15px);
+    opacity: 0.6;
+  }
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@font-face {
+  font-family: 'NERVFont';
+  src: url('assets/font/Evangelion.ttf') format('truetype');
+}
+
