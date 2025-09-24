@@ -13,7 +13,7 @@ html, body {
 
 @font-face {
   font-family: 'NERVFont';
-  src: url('assets/font/Evangelion.ttf') format('truetype');
+  src: url('https://husbaki.github.io/nerv/assets/font/Evangelion.ttf') format('truetype');
 }
 
 .navbar {
@@ -164,3 +164,4 @@ svg {
   height: auto;
   display: block;
 }
+
