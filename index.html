@@ -4,11 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NERV</title>
-  <link rel="stylesheet" href="https://husbaki.github.io/nerv/style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <div class="layout">
+  <!-- NAVIGATION PANEL -->
+  <nav class="navbar">
+    <div class="navbar__logo">
+      <img src="assets/img/logo.png" alt="NERV Logo" class="nerv-logo" />
+    </div>
+
+    <ul class="navbar__menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#units">Units</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <div class="layout" id="home">
     <div class="text-box">
       <h1>Welcome to NERV</h1>
       <p>God's in his heaven. All's right with the world.</p>
@@ -17,14 +32,12 @@
     <svg class="ribbon" xmlns="http://www.w3.org/2000/svg"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          viewBox="0 0 1920 1080">
-      <defs></defs>
-      
       <path id="text-path"
             stroke-width="200"
             stroke-miterlimit="0"
             fill="none"
             d="M-98 194C260 326 450 318 770 294 1010 262 1200 182 1430 150 1530 134 1631 129 1718 202.8 1810 289 1810 438 1540 510 1190 606 810 470 430 550 251 590 140 670 160 790 192 910 308 917 410 926 530 934 620 918 790 886 943 854 1100 806 1240 790 1500 750 1720 774 2120 945" />
-      
+
       <text class="ribbon__text">
         <textPath xlink:href="#text-path" startOffset="0">
           <animate attributeName="startOffset" from="0%" to="-100%" begin="0s" dur="25s" repeatCount="indefinite" />
@@ -37,9 +50,11 @@
     </svg>
   </div>
 
+  <!-- SCROLL ARROW -->
   <div class="scroll-down-arrow">&#x25BC;</div>
 
-  <section class="info-section">
+  <!-- ABOUT SECTION -->
+  <section class="info-section" id="about">
     <h2>About NERV</h2>
     <p>
       NERV is an organization responsible for defending humanity from the threat of Angels.
@@ -51,8 +66,24 @@
     </p>
   </section>
 
-  <script src="https://husbaki.github.io/nerv/script.js"></script>
+  <!-- UNITS SECTION -->
+  <section class="info-section" id="units">
+    <h2>Evangelion Units</h2>
+    <p>
+      Evangelion Unit-00: Prototype. Piloted by Rei Ayanami.<br>
+      Evangelion Unit-01: Test Type. Piloted by Shinji Ikari.<br>
+      Evangelion Unit-02: Production Model. Piloted by Asuka Langley Soryu.
+    </p>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="info-section" id="contact">
+    <h2>Contact</h2>
+    <p>
+      Reach out to NERV HQ at <a href="mailto:tokyo-3@nerv.jp" style="color:#ff0000;">tokyo-3@nerv.jp</a>.
+    </p>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
-
