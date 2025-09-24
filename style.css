@@ -8,8 +8,66 @@ html, body {
   padding: 0;
   background: black;
   overflow-x: hidden;
-  overflow-y: auto;
   color: white;
+}
+
+@font-face {
+  font-family: 'NERVFont';
+  src: url('assets/font/Evangelion.ttf') format('truetype');
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 20px 60px;
+  border-bottom: 2px solid #ff0000;
+  font-family: 'NERVFont', sans-serif;
+  text-transform: uppercase;
+}
+
+.navbar__logo {
+  width: 90px;
+  height: auto; 
+}
+
+.navbar__menu {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar__menu li a:hover {
+  color: #ff0000;
+}
+
+.navbar__menu li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #ff0000;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+.navbar__menu li a:hover::after {
+  width: 100%;
 }
 
 .layout {
@@ -27,7 +85,6 @@ html, body {
   box-sizing: border-box;
   font-family: 'NERVFont', sans-serif;
   text-transform: uppercase;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,16 +127,6 @@ html, body {
   line-height: 1.6;
 }
 
-.events {
-  padding: 60px 10vw;
-  background-color: #4d2d2d;
-  color: #fff;
-  font-family: 'NERVFont', sans-serif;
-  text-transform: uppercase;
-  font-size: 18px;
-  line-height: 1.6;
-}
-
 .info-section h2 {
   font-size: 36px;
   color: #ff0000;
@@ -97,7 +144,6 @@ html, body {
   animation: bounce 2s infinite;
   user-select: none;
   z-index: 1000;
-
   transition: opacity 0.5s ease;
 }
 
@@ -118,10 +164,3 @@ svg {
   height: auto;
   display: block;
 }
-
-@font-face {
-  font-family: 'NERVFont';
-  src: url('https://husbaki.github.io/nerv/assets/font/Evangelion.ttf') format('truetype');
-}
-
-
