@@ -19,11 +19,8 @@ arrow.addEventListener('click', () => {
     behavior: 'smooth'
   });
 
-  // Проверяем каждые 100мс после клика, когда анимация скролла закончится
   const intervalId = setInterval(() => {
     checkArrowVisibility();
-
-    // Если прокрутка достигла нужного места, останавливаем проверку
     if (window.scrollY >= window.innerHeight - 10) {
       clearInterval(intervalId);
     }
@@ -31,6 +28,18 @@ arrow.addEventListener('click', () => {
 });
 
 window.addEventListener('scroll', checkArrowVisibility);
-
-// Проверим сразу при загрузке страницы (если уже внизу)
 checkArrowVisibility();
+
+// Smooth scroll for navbar links
+document.querySelectorAll('.navbar__menu a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      window.scrollTo({
+        top: target.offsetTop - 60,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
